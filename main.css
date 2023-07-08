@@ -1,0 +1,116 @@
+:root {
+  --color-home: #212121;
+  --formcolor: #f9f9f9;
+  --titlecolor: #cfd8dc;
+  --backgroundtitle: #b0bec5;
+  --inputcolor: #eeeeee;
+  --errorcolor: #ff5722;
+  --successcolor: #00c853;
+}
+
+@font-face {
+  font-family: vazir;
+  src: url(fonts/Vazirmatn-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-home);
+  font-family: vazir;
+}
+
+.container {
+  width: 35%;
+  margin: 5rem auto;
+  border: solid 2px #ababab;
+  background-color: var(--formcolor);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  color: var(--color-home);
+  background-color: var(--backgroundtitle);
+  padding: 0.5rem;
+}
+
+.form {
+  padding: 1rem;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formControl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formControl label {
+  padding: 0.3rem;
+  color: var(--color-home);
+}
+
+.formControl input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  direction: ltr;
+  background-color: var(--inputcolor);
+  border-radius: 0.5rem;
+}
+
+.formControl input:focus {
+  border: 3px solid #304ffe;
+  background-color: var(--formcolor);
+  color: var(--color-home);
+}
+
+.formControl span {
+  color: var(--errorcolor);
+  padding: 0.2rem 1rem;
+  visibility: hidden;
+  display: none;
+}
+
+.formControl.error span {
+  visibility: visible;
+  display: block;
+}
+.formControl.success input {
+  border: 3px solid var(--successcolor);
+  color: var(--successcolor);
+}
+
+.formControl.error input {
+  border: 3px solid var(--errorcolor);
+  color: var(--errorcolor);
+}
+
+.form button {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--backgroundtitle);
+  color: var(--color-home);
+  cursor: pointer;
+}
+.form button:active {
+  background-color: var(--inputcolor);
+}
